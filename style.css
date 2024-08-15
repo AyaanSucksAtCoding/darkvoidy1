@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
-    background: url(Logo/Some\ gif\ and\ logos/try.gif) no-repeat center center;
+    background: linear-gradient(#37474f ,#888888  ,#37474f ) no-repeat center center;
     background-size: cover;
 }
 
@@ -61,6 +61,7 @@ body {
     font-weight: 700;
     font-size: 5vw; /* Responsive font size */
     margin: 0;
+    font-family: 'poppins' ,Arial, Helvetica, sans-serif;
 }
 
 .home h3 {
@@ -104,20 +105,22 @@ section {
 #samples button {
     padding: 20px 40px;
     font-size: 1.5rem; /* Responsive font size */
-    color: #e74c3c;
-    background-color: rgba(255, 255, 255, 0.2);
-    border: 2px solid #e74c3c;
+    color: #9b59b6;
+    background-color: transparent;
+    border: 2px solid #9b59b6;
     border-radius: 12px;
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 68px;
+background: #e0e0e0;
 }
 
 #samples button:hover {
     transform: scale(1.1);
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: #9b59b6;
+    color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-
 #contact {
     background-color: transparent;
     color: white;
@@ -132,6 +135,8 @@ section {
     border-radius: 12px;
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 68px;
+background: #e0e0e0;
 }
 
 #contact button:hover {
@@ -213,28 +218,37 @@ h1 {
     justify-content: center;
     gap: 20px;
     padding: 40px 20px;
+    
 }
 
 .logo-item {
-    width: 30%;
+    width: 30%; /* Ensure the correct width */
     max-width: 300px;
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0; /* Remove extra margin below */
+    padding-bottom: 0; /* Remove padding to eliminate space */
+    
 }
 
 .logo-item img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%; /* Ensure the image fills the container */
+    object-fit: cover; /* Cover the card area without leaving space */
     border-radius: 15px;
+    display: block;
 }
 
 .logo-item:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
+
 
 @media (max-width: 768px) {
     .logo-item {
@@ -285,4 +299,9 @@ h1 {
 #banner h1 {
     font-family: 'poppins', Arial, Helvetica, sans-serif;
     color: #ffffff;
+}
+
+#logo-item {
+    width: 100%;
+    height: auto;
 }

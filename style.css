@@ -1,0 +1,288 @@
+/* General styles */
+body {
+    background: #33CCCC;
+    animation: color 9s infinite linear;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    background: url(Logo/Some\ gif\ and\ logos/try.gif) no-repeat center center;
+    background-size: cover;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center; /* Center align items horizontally */
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+.home {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.home h1 {
+    font-weight: 700;
+    font-size: 5vw; /* Responsive font size */
+    margin: 0;
+}
+
+.home h3 {
+    font-weight: 600;
+    font-size: 2.5vw; /* Responsive font size */
+    margin-top: 5px;
+    white-space: nowrap;
+    text-transform: capitalize;
+}
+
+section {
+    padding: 6em 2em;
+    text-align: center;
+}
+
+#experience {
+    background-color: transparent;
+    color: white;
+}
+
+#samples {
+    background-color: transparent;
+    color: white;
+}
+
+#samples h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#samples a {
+    text-decoration: none;
+}
+
+#samples button {
+    padding: 20px 40px;
+    font-size: 1.5rem; /* Responsive font size */
+    color: #e74c3c;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid #e74c3c;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#samples button:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#contact {
+    background-color: transparent;
+    color: white;
+}
+
+#contact button {
+    padding: 20px 40px;
+    font-size: 1.5rem; /* Responsive font size */
+    color: #9b59b6;
+    background-color: transparent;
+    border: 2px solid #9b59b6;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact button:hover {
+    transform: scale(1.1);
+    background-color: #9b59b6;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .navbar ul li a {
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
+
+    .home h1 {
+        font-size: 40px; /* Adjusted for smaller screens */
+    }
+
+    .home h3 {
+        font-size: 24px; /* Adjusted for smaller screens */
+    }
+
+    section {
+        padding: 4em 1em; /* Adjusted padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .home h1 {
+        font-size: 30px; /* Adjusted for very small screens */
+        font-family: 'poppins' ,Arial, Helvetica, sans-serif;
+        font-weight: 700;
+    }
+
+    .home h3 {
+        font-size: 18px; /* Adjusted for very small screens */
+        font-family: 'poppins' ,Arial, Helvetica, sans-serif;
+        font-weight: 600;
+    }
+
+    #samples button, #contact button {
+        font-size: 16px; /* Adjusted for smaller buttons */
+        padding: 15px 30px;
+    }
+
+    .logo-item {
+        width: 100%;
+    }
+}
+
+.logo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.logo-item {
+    width: 30%;
+    max-width: 300px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+}
+
+.logo-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+    .logo-item {
+        width: 100%;
+    }
+}
+
+/* CSS for the banner gallery */
+.banner-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.banner-item {
+    width: 40%; /* Adjust width for larger cards */
+    max-width: 400px; /* Adjust max-width for larger cards */
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-item img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the card */
+    border-radius: 15px;
+}
+
+.banner-item:hover {
+    transform: scale(1.1); /* Slightly larger hover effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+    .banner-item {
+        width: 100%; /* Full width on smaller screens */
+        max-width: none; /* Remove max-width on smaller screens */
+    }
+}
+
+#banner h1 {
+    font-family: 'poppins', Arial, Helvetica, sans-serif;
+    color: #ffffff;
+}
